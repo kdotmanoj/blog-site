@@ -27,7 +27,7 @@ const BlogForm = () => {
       content, 
       author, 
       image, 
-      category, // Include category in the blog object
+      category, 
       date: new Date().toISOString() 
     };
     if (id) {
@@ -89,7 +89,7 @@ const BlogForm = () => {
               'undo redo | formatselect | bold italic backcolor | \
                alignleft aligncenter alignright alignjustify | \
                bullist numlist outdent indent | removeformat | help',
-            content_css: 'https://www.tiny.cloud/css/codepen.min.css'  // Optional: Add custom CSS
+            content_css: 'https://www.tiny.cloud/css/codepen.min.css'  
           }}
           onChange={(e) => setContent(e.target.getContent())}
         />

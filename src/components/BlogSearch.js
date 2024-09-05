@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { TextField, Box, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Grid2';
 import BlogCard from './BlogCard';
-import { setSearchTerm } from '../redux/action'; // Corrected import path
+import { setSearchTerm } from '../redux/action'; 
 
 const BlogSearch = () => {
   const dispatch = useDispatch();

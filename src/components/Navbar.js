@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom'; // Add useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import { AppBar, Toolbar, Button, Typography, useTheme } from '@mui/material';
 import { setCategory } from '../redux/action';
 
@@ -8,16 +8,16 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const categories = useSelector(state => state.blogs.categories);
   const theme = useTheme();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleCategoryClick = (category) => {
     dispatch(setCategory(category));
-    navigate(`/category/${category}`); // Navigate to category page
+    navigate(`/category/${category}`);
   };
 
   const handleHomeClick = () => {
-    dispatch(setCategory(null)); // Clear the selected category
-    navigate('/'); // Navigate back to the home page
+    dispatch(setCategory(null));
+    navigate('/'); 
   };
 
   return (

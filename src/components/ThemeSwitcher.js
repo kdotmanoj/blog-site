@@ -6,7 +6,7 @@ import { WbSunny as SunIcon, Brightness2 as MoonIcon } from '@mui/icons-material
 
 const ToggleButton = styled(IconButton)(({ theme }) => ({
   position: 'absolute',
-  top: '80px', // Position it below the navbar
+  top: '80px', 
   right: '20px',
   backgroundColor: theme.palette.mode === 'dark' ? '#333' : '#fff',
   borderRadius: '50%',
