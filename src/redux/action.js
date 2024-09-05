@@ -23,3 +23,7 @@ export const setSearchTerm = (term) => ({
   payload: term,
 });
 
+export const updateBlog = (blog) => ({
+  type: 'UPDATE_BLOG',
+  payload: blog
+});
