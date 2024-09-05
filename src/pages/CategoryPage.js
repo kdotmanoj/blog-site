@@ -1,40 +1,30 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import BlogCard from '../components/BlogCard';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Grid2';
+import BlogCard from '../components/BlogCard';
 
 const CategoryPage = () => {
-  const { category } = useParams(); // Get category from URL
-  const blogs = useSelector(state => state.blogs.blogs);
-
-  // Filter blogs based on category from URL
-  const filteredBlogs = blogs.filter(blog => blog.category === category);
+  const { category } = useParams();
+  const blogs = useSelector(state => state.blogs.blogs.filter(blog => blog.category === category));
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 4 }}>
-      <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 4 }}>
+    <Container>
+      <Typography variant="h4" sx={{ mb: 4 }}>
         {category} Blogs
       </Typography>
-
-      {filteredBlogs.length === 0 ? (
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-          <Typography variant="h6" color="text.secondary">
-            No blogs available for this category.
-          </Typography>
-        </Box>
-      ) : (
-        <Box sx={{ my: 4 }}>
-          <Grid2 container spacing={3}>
-            {filteredBlogs.map(blog => (
-              <Grid2 item xs={12} sm={6} md={4} key={blog.id}>
-                <BlogCard blog={blog} />
-              </Grid2>
-            ))}
-          </Grid2>
-        </Box>
-      )}
+      <Grid2 container spacing={3}>
+        {blogs.length > 0 ? (
+          blogs.map(blog => (
+            <Grid2 item xs={12} sm={6} md={4} key={blog.id}>
+              <BlogCard blog={blog} />
+            </Grid2>
+          ))
+        ) : (
+          <Typography variant="body1">No blogs available in this category.</Typography>
+        )}
+      </Grid2>
     </Container>
   );
 };

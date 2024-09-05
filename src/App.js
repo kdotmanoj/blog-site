@@ -24,7 +24,7 @@ const App = () => {
           <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/create" element={<BlogForm />} />
           <Route path="/edit/:id" element={<BlogForm />} />
-          <Route path="/category/:category" element={<CategoryPage />} /> {/* Add this route */}
+          <Route path="/category/:category" element={<CategoryPage />} /> 
         </Routes>
       </Router>
     </ThemeProvider>
