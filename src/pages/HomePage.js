@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Container, Box, Typography } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
-import BlogCard from '../components/BlogCard';
 import BlogSearch from '../components/BlogSearch';
 
 const HomePage = () => {
