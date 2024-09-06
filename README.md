@@ -1,5 +1,9 @@
 # Blog App
 
+## Live Demo
+
+Check out the live demo of the app on Vercel: [Vercel Deployment URL](https://blog-site-rho-three.vercel.app/)
+
 ## About
 
 This is a modern blog application built with React, Redux, and Material-UI. The app allows users to create, edit, and delete blog posts, as well as view posts by category. It supports dark and light themes and includes rich text editing capabilities using TinyMCE.
@@ -40,6 +44,13 @@ This is a modern blog application built with React, Redux, and Material-UI. The 
    ```bash
    npm install
    ```
+4. **Create Environment Variables**:
+   
+   Create a `.env` file in the root of the project with the following content
+   ```env
+   REACT_APP_TINYMCE_API_KEY=your_api_key_here
+   ```
+   Replace `your_api_key_here` with your actual TinyMCE API key. You can obtain an API key from [TinyMCE](https://www.tiny.cloud/docs/tinymce/latest/).
 4. **Start the development server**:
    ```bash
    npm start
@@ -53,8 +64,3 @@ This is a modern blog application built with React, Redux, and Material-UI. The 
 - **View Blog Details**: Click on a blog post to view its details.
 - **Filter by Category**: Select a category from the navbar to filter blog posts.
 - **Toggle Theme**: Click the sun/moon icon to switch between light and dark modes.
-
-## Live Demo
-
-Check out the live demo of the app on Vercel: [Your Vercel Deployment URL]()
-
