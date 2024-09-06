@@ -36,7 +36,7 @@ const Navbar = () => {
         {categories.map(category => (
           <Button
             key={category}
-            onClick={() => handleCategoryClick(category)} // Handle category click
+            onClick={() => handleCategoryClick(category)} 
             sx={{
               color: 'inherit',
               '&:hover': {
