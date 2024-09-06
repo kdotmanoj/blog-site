@@ -56,5 +56,5 @@ This is a modern blog application built with React, Redux, and Material-UI. The 
 
 ## Live Demo
 
-Check out the live demo of the app on Vercel: [Your Vercel Deployment URL]()
+Check out the live demo of the app on Vercel: [Vercel Deployment URL](https://blog-site-rho-three.vercel.app/)
 
