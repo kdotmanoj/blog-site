@@ -75,7 +75,7 @@ const BlogForm = () => {
           </Select>
         </FormControl>
         <Editor
-          apiKey='xp6j9kap1uw8rkz0vj5h4lndh8l7yoyeeibe9uokcq46cyik'  
+          apiKey={process.env.REACT_APP_TINYMCE_API_KEY}
           initialValue={content}
           init={{
             height: 500,
@@ -87,9 +87,9 @@ const BlogForm = () => {
             ],
             toolbar:
               'undo redo | formatselect | bold italic backcolor | \
-               alignleft aligncenter alignright alignjustify | \
-               bullist numlist outdent indent | removeformat | help',
-            content_css: 'https://www.tiny.cloud/css/codepen.min.css'  
+              alignleft aligncenter alignright alignjustify | \
+              bullist numlist outdent indent | removeformat | help',
+            content_css: 'https://www.tiny.cloud/css/codepen.min.css'
           }}
           onChange={(e) => setContent(e.target.getContent())}
         />
